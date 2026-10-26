@@ -12,24 +12,24 @@ class PrimoController extends Controller
 
     public function artisti(){
         $artisti= [
-            ["nome" => "Bruce Dickinson", "subject"=> "Voce"],
-            ["nome" => "Steve Harrys", "subject"=> "Basso"],
-            ["nome" => "Nicko McBrain", "subject"=> "Batteria"],
-            ["nome" => "Dave Murray", "subject"=> "Chitarra"]
+            ["id"=> 1,"nome" => "Bruce Dickinson", "subject"=> "Voce"],
+            ["id"=> 2,"nome" => "Steve Harrys", "subject"=> "Basso"],
+            ["id"=> 3,"nome" => "Nicko McBrain", "subject"=> "Batteria"],
+            ["id"=> 4,"nome" => "Dave Murray", "subject"=> "Chitarra"]
         ];
         return view('artisti', ["artisti"=>$artisti]);
 
     }
 
-    public function dettaglioArtisti ($nome){
+    public function dettaglioArtisti ($id){
         $artisti= [
-            ["nome" => "Bruce Dickinson", "subject"=> "Voce"],
-            ["nome" => "Steve Harrys", "subject"=> "Basso"],
-            ["nome" => "Nicko McBrain", "subject"=> "Batteria"],
-            ["nome" => "Dave Murray", "subject"=> "Chitarra"]
+            ["id"=> 1,"nome" => "Bruce Dickinson", "subject"=> "Voce"],
+            ["id"=> 2,"nome" => "Steve Harrys", "subject"=> "Basso"],
+            ["id"=> 3,"nome" => "Nicko McBrain", "subject"=> "Batteria"],
+            ["id"=> 4,"nome" => "Dave Murray", "subject"=> "Chitarra"]
         ];
         foreach ($artisti as $artista) {
-            if ($nome == $artista["nome"]){
+            if ($id == $artista["id"]){
                 return view("dettaglioartisti", ["artista"=>$artista]);
             };
         };

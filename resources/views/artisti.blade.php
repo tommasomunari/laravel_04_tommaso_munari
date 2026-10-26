@@ -27,7 +27,7 @@
                     <h2>{{$artista["nome"]}}</h2>
                     <h2>{{$artista["subject"]}}</h2>
                     <button>
-                        <a href="{{route("paginadettaglioartisti", ["nome"=>$artista["nome"]])}}">Scopri la sua Storia</a>
+                        <a href="{{route("paginadettaglioartisti", ["id"=>$artista["id"]])}}">Scopri la sua Storia</a>
                     </button>
                 </div>
             @endforeach
